@@ -101,6 +101,11 @@
                                     {{ __('User Management') }}
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('marital.index') }}">
+                                    {{ __('Marital') }}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
