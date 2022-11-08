@@ -5,6 +5,12 @@
         ])
 
 <div class="container-fluid mt--7">
+  <div class="text-end mb-3 me-3">
+    <a href="#" onclick="add_user()" class="btn btn-success waves-effect waves-light">
+      <i class="fas fa-plus me-2"></i>
+      Add New Application
+    </a>
+  </div>
   <div class="row">
     <div class="col-12 order-xl-1">
       <div class="card bg-default shadow">
