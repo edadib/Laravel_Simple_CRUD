@@ -20,8 +20,6 @@
                         <form method="post" action="{{ route('profile.update') }}" autocomplete="off">
                             @csrf
                             @method('put')
-
-                            <h6 class="heading-small text-muted mb-4">{{ __('User information') }}</h6>
                             
                             @if (session('status'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
