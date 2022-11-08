@@ -35,6 +35,9 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
     Route::get('/marital', 'App\Http\Controllers\MaritalController@index')->name('marital.index');
     Route::get('/staff', 'App\Http\Controllers\StaffController@index')->name('staff.index');
+    Route::get('/staff-view/{staff_id}', 'App\Http\Controllers\StaffController@viewstaff')->name('staff.view');
+    Route::get('/user', 'App\Http\Controllers\StaffController@userlist')->name('staff.user');
     Route::get('/ngo', 'App\Http\Controllers\NgoController@index')->name('ngo.index');
-    Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
+    Route::get('/announce', 'App\Http\Controllers\AnnouncementController@index');
+    Route::get('/user', 'App\Http\Controllers\StaffController@add_user')->name('user.add_user');;
 });

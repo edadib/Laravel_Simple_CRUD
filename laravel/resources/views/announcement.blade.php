@@ -11,14 +11,14 @@
         <div class="col">
           <div class="card bg-default shadow">
             <div class="card-header bg-transparent border-0">
-              <h3 class="text-white mb-0">NGO List</h3>
+              <h3 class="text-white mb-0">Announcement table</h3>
             </div>
             <div class="table-responsive">
               <table class="table align-items-center table-dark table-flush" id="table_senarai">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col" class="sort" data-sort="name">No</th>
-                    <th scope="col" class="sort" data-sort="budget">NGO</th>
+                    <th scope="col" class="sort" data-sort="budget">Staff</th>
                     <th scope="col" class="sort text-center" data-sort="budget">Action</th>
                   </tr>
                 </thead>
