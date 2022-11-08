@@ -22,7 +22,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('staff.index') }}" style="color: #fff;">
+                <a class="nav-link" href="{{ route('staff.user') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('User Management') }}
                 </a>
             </li>
@@ -42,8 +42,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('ngo.index') }}" style="color: #fff;">
+                <a class="nav-link" href="{{ route('staff.index') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Staff List') }}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('application.index') }}" style="color: #fff;">
+                    <i class="ni ni-tv-2 text-primary"></i> {{ __('Application List') }}
                 </a>
             </li>
             {{-- <li class="nav-item">
