@@ -42,7 +42,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/ngo/add_ngo', 'App\Http\Controllers\NgoController@add_ngo')->name('ngo.add_ngo');
 	Route::post('/ngo/insert_ngo', 'App\Http\Controllers\NgoController@insert_ngo')->name('ngo.insert_ngo');
 	Route::post('/delete/{id}', 'App\Http\Controllers\NgoController@get_delete')->name('ngo.delete');
-	Route::get('/announce', 'App\Http\Controllers\AnnouncementController@index');
 	Route::get('/application', 'App\Http\Controllers\ApplicationController@index')->name('application.index');
 	
 	//activity
@@ -52,4 +51,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/store-activity', 'App\Http\Controllers\ActivityController@store')->name('activity.store');
     Route::post('/update-activity/{id}', 'App\Http\Controllers\ActivityController@update')->name('activity.update');
     Route::post('/delete-activity/{id}', 'App\Http\Controllers\ActivityController@delete')->name('activity.delete');
+
+	//announcenment
+	Route::get('/announ', 'App\Http\Controllers\AnnouncementController@index')->name('announ.index');
+	Route::get('/announ/create_announ', 'App\Http\Controllers\AnnouncementController@create');
+	Route::post('/announ/store', 'App\Http\Controllers\AnnouncementController@store');
 });

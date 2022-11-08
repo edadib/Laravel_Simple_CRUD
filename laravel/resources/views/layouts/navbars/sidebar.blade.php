@@ -64,7 +64,7 @@
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Application List') }}
                 </a>
             </li>
-            {{-- <li class="nav-item">
+            <!-- {{-- <li class="nav-item">
                 <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                     <i class="fab fa-laravel" style="color: #f4645f;"></i>
                     <span class="nav-link-text" style="color: #f4645f;">{{ __('Admin Menu') }}</span>
@@ -74,9 +74,8 @@
                     <ul class="nav nav-sm flex-column">
                     </ul>
                 </div>
-            </li> --}}
+            </li> --}} -->
         </ul>
-
         </div>
       </div>
     </div>
