@@ -11,20 +11,20 @@
         <div class="col">
           <div class="card bg-default shadow">
             <div class="card-header bg-transparent border-0">
-              <h3 class="text-white mb-0">NGO List</h3>
-              <div class="text-right">
-                  <button class="btn btn-success mt-4" onclick="add_ngo()">{{ __('Add NGO') }}</button>
-              </div>
+              <h3 class="text-white mb-0">Application List</h3>
             </div>
             <div class="table-responsive">
               <table class="table align-items-center table-dark table-flush" id="table_senarai">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col" class="sort" data-sort="name">No</th>
-                    <th scope="col" class="sort" data-sort="budget">NGO</th>
-                    <th scope="col" class="sort" data-sort="budget">Phone Number</th>
-                    <th scope="col" class="sort" data-sort="budget">Account Number</th>
-                    <th scope="col" class="sort text-center" data-sort="budget">Action</th>
+                    <th scope="col" class="sort" data-sort="budget">Application ID</th>
+                    <th scope="col" class="sort" data-sort="budget">Applicant</th>
+                    <th scope="col" class="sort" data-sort="budget">Staff ID</th>
+                    <th scope="col" class="sort" data-sort="budget">Staff </th>
+                    <th scope="col" class="sort" data-sort="budget">Shirt Size </th>
+                    <th scope="col" class="sort" data-sort="budget">NGO </th>
+                    <th scope="col" class="sort" data-sort="budget">Relationship </th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -36,17 +36,25 @@
                             <?php echo $count; ?>
                             </td>
                             <td class="budget">
-                            <?php echo $sen->name; ?>
+                            <?php echo $sen->appID; ?>
                             </td>
                             <td class="budget">
-                            <?php echo $sen->phone; ?>
+                            <?php echo $sen->applicant; ?>
                             </td>
                             <td class="budget">
-                            <?php echo $sen->account; ?>
+                            <?php echo $sen->staff_id; ?>
                             </td>
-                            <td class="text-center">
-                              <button class="btn btn-success mt-4" >{{ __('Edit NGO') }}</button>
-                              <button class="btn btn-success mt-4" >{{ __('Delete NGO') }}</button>
+                            <td class="budget">
+                            <?php echo $sen->staff_name; ?>
+                            </td>
+                            <td class="budget">
+                            <?php echo $sen->size; ?>
+                            </td>
+                            <td class="budget">
+                            <?php echo $sen->ngo_name; ?>
+                            </td>
+                            <td class="budget">
+                            <?php echo $sen->relation; ?>
                             </td>
                         </tr>
                         <?php $count +=1; ?>
@@ -61,28 +69,3 @@
       @include('layouts.footers.auth')
     </div>
 @endsection
-
-<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script>
-  function add_ngo()
-  {
-    window.location.href = "{{ route('ngo.add_ngo')}}";
-  }
-
-  function ngodelete(id)
-  {
-    // alert(id);
-    $.ajax({
-        url:"{{ route('ngo.delete')}}",
-        method:"POST",
-        data:{ 
-            id: id, 
-        },
-        success:function(result)
-        {
-            console.log(result);
-        }
-    });
-  }
-
-</script>

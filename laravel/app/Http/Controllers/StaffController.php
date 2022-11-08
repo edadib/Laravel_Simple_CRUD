@@ -23,8 +23,8 @@ class StaffController extends Controller
         return view('userlist',compact('senarai'));
     }
 
-    public function addadd_user()
+    public function add_user()
     {
-        return view('add_user');
+        return view('dell_user/add_user');
     }
 }

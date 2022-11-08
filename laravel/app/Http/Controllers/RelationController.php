@@ -1,15 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Sizes;
+use App\Models\relation;
 use Illuminate\Http\Request;
 
-class SizeController extends Controller
+class RelationController extends Controller
 {
     public function index()
     {
 
-        $senarai = Sizes::all();
+        $senarai = relation::all();
 
         return view('ngolist',compact('senarai'));
     }
