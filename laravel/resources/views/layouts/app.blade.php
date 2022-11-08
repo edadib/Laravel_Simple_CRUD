@@ -7,11 +7,12 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Argon Dashboard') }}</title>
+        <title>Dell Charity Engage (DCE)</title>
         <!-- Favicon -->
         <link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
         <!-- Extra details for Live View on GitHub Pages -->
 
         <!-- Icons -->
