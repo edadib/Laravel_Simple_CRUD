@@ -15,7 +15,7 @@ class ProfileController extends Controller
      */
     public function edit()
     {
-        return view('profile.edit');
+        return view('dell_user.edit');
     }
 
     /**
@@ -51,4 +51,6 @@ class ProfileController extends Controller
 
         return back()->withPasswordStatus(__('Password successfully updated.'));
     }
+
+    
 }
