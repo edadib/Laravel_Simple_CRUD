@@ -1,11 +1,9 @@
 @extends('layouts.app', ['title' => __('User Profile')])
 
 @section('content')
-    @include('users.partials.header', [
-        'title' => false,
-        'description' => false,
-        'class' => 'col-lg-7'
-    ])   
+@include('users.partials.header', [
+        'title' => 'Add New NGO'
+        ]) 
 
     <div class="container-fluid mt--7">
         <div class="row">
