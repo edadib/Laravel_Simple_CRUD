@@ -1,7 +1,7 @@
 @extends('layouts.app', ['title' => __('User Profile')])
 @section('content')
 @include('users.partials.header', [
-        'title' => 'Application'
+        'title' => 'Application List'
         ])
 
 <div class="container-fluid mt--7">
@@ -11,7 +11,7 @@
         <div class="card-body">
           <div class="table-responsive py-4">
             <table class="table table-bordered table-dark" id="ngo-datatable">
-              <thead class="thead-dark">
+              <thead>
                 <tr>
                   <th scope="col" class="sort" data-sort="name">No</th>
                   <th scope="col" class="sort" data-sort="budget">Application ID</th>
