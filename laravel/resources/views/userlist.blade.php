@@ -22,6 +22,7 @@
                   <tr>
                     <th scope="col" class="sort" data-sort="name">No</th>
                     <th scope="col" class="sort" data-sort="budget">User</th>
+                    <th scope="col" class="sort" data-sort="budget">Email</th>
                     <th scope="col" class="sort" data-sort="budget">Role</th>
                     <th scope="col" class="sort text-center" data-sort="budget">Action</th>
                   </tr>
@@ -36,6 +37,9 @@
                             </td>
                             <td class="budget">
                             <?php echo $sen->name; ?>
+                            </td>
+                            <td class="budget">
+                            <?php echo $sen->email; ?>
                             </td>
                             <td class="budget">
                             <?php echo $sen->role; ?>
