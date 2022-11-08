@@ -30,8 +30,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('staff.index') }}">
+                            <a class="nav-link" href="{{ route('staff.user') }}">
                                 {{ __('User Management') }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('staff.index') }}">
+                                {{ __('All Staff') }}
                             </a>
                         </li>
                         <li class="nav-item">

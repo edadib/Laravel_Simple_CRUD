@@ -20,6 +20,11 @@ class StaffController extends Controller
     {
         $senarai = DB::table('users')->get();
 
-        return view('stafflist',compact('senarai'));
+        return view('userlist',compact('senarai'));
+    }
+
+    public function addadd_user()
+    {
+        return view('add_user');
     }
 }

@@ -39,5 +39,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/user', 'App\Http\Controllers\StaffController@userlist')->name('staff.user');
     Route::get('/ngo', 'App\Http\Controllers\NgoController@index')->name('ngo.index');
     Route::get('/announce', 'App\Http\Controllers\AnnouncementController@index');
+    Route::get('/user', 'App\Http\Controllers\StaffController@add_user')->name('user.add_user');;
 });
 
