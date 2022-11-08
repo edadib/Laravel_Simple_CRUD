@@ -18,7 +18,7 @@
         <div class="card-body">
           <div class="table-responsive py-4">
             <table class="table table-bordered table-dark" id="user-datatable">
-              <thead class="thead-dark">
+              <thead>
                 <tr>
                   <th scope="col" class="sort" data-sort="name">No</th>
                   <th scope="col" class="sort" data-sort="budget">User</th>
@@ -50,7 +50,7 @@
                           @method('post')
                           <input type="hidden" name="id" id="id" value="<?php echo $sen->userID; ?>">
                           <!-- <button class="btn btn-success" >{{ __('Edit User') }}</button> -->
-                          <button class="btn btn-danger" type="submit">{{ __('Delete User') }}</button>
+                          <button class="btn btn-danger" type="submit">{{ __('Delete') }}</button>
                         </form>
                       </td>
                     </tr>
