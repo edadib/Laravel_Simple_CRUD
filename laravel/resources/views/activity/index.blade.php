@@ -32,18 +32,23 @@
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{$a->name}}</td>
                                             <td>{{$a->details}}</td>
-                                            <td class="td-actions text-right">
-                                                <form action="{{ route('activity.create')}}" method="POST">
+                                            <td class="td-actions text-center">
+                                                <a rel="tooltip" class="edit btn btn-success" href="{{ route('activity.edit', ['id' => $a->id])}}">
+                                                    Edit
+                                                </a>
+                                                <a type="button" class="delete btn btn-danger" onclick="return confirm('Are you sure you want to remove this activity?')" href="{{ route('activity.delete', [ 'id' => $a->id ]) }}">
+                                                    Delete
+                                                </a>
+                                                {{-- <form method="POST" action="{{ route('activity.delete', $a->id) }}">
                                                     @csrf
-                                                    @method('delete')
-
-                                                    <a rel="tooltip" class="edit btn btn-primary btn-sm" href="{{ route('activity.edit', ['id' => $a->id])}}">
-                                                        Edit
-                                                    </a>
-                                                    <a type="button" class="delete btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to remove this activity?')" href="{{ route('activity.delete', [ 'id' => $a->id ]) }}">
-                                                        Delete
-                                                    </a>
-                                                </form>
+                                                    <input name="_method" type="hidden" value="DELETE">
+                                                    <button type="submit" class="btn btn-danger btn-sm delete-confirm" data-toggle="tooltip" title='Delete'>Delete</button>
+                                                </form> --}}
+                                                {{-- <form method="POST" action="{{ route('activity.delete', $a->id) }}">
+                                                    @csrf
+                                                    @method('post')
+                                                    <a class="btn btn-warning delete-confirm">Delete</a>
+                                                </form>  --}}
                                             </td>
                                         </tr>
                                         @endforeach
@@ -55,62 +60,40 @@
                 </div>
             </div>
         </div>
+        @include('layouts.footers.auth')
 @endsection
-@section('script')
-<script>
-function padam(id) {
-    Swal.fire({
-        icon: 'info',
-        title: 'Are you sure to delete this activity?',
-        showCancelButton: true,
-        confirmButtonText: 'Yes, Proceed.',
-        cancelButtonText: `Cancel`,
-    }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-            $.ajax({
-                url: "{{ url('activity.delete') }}/"+ id ,
-                method: 'POST',
-                data: {
-                    _token: '{{ csrf_token() }}'
-                },
-                success: function(response) {
-                    console.log(response.success)
 
-                    if (response.success) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Activity successfully deleted.',
-                            showCancelButton: false,
-                            confirmButtonText: 'Ok',
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                location.reload();
-                            }
-                        })
-                    } else {
-                        console.log(response)
-                        Swal.fire('Failed', response.message, 'error');
-                    }
-                }
-            })
-        }
-    })
-}
+@push('js')
 
-</script>
-
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @if ($message = Session::get('success'))
+    <script>
+       Swal.fire({
+        text: "{{ $message }}",
+        icon: "success",
+        confirmButtonText: "Okay",
+        customClass: {
+            confirmButton: "btn btn-success",
+        }
+    });
+    </script>
+@endif
 <script>
-Swal.fire({
-    text: "{{ $message }}",
-    icon: "success",
-    confirmButtonText: "Ok",
-    customClass: {
-        confirmButton: "btn btn-primary",
-    }
+
+$('.delete-confirm').on('click', function (event) {
+    event.preventDefault();
+    const url = $(this).attr('href');
+    swal({
+        title: 'Are you sure to delete this activity?',
+        icon: 'warning',
+        buttons: ["Cancel", "Yes!"],
+    }).then(function(value) {
+        if (value) {
+            window.location.href = url;
+        }
+    });
+
 });
 </script>
-@endif
-@endsection
+
+@endpush

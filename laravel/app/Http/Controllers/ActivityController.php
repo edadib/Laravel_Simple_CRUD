@@ -50,6 +50,9 @@ class ActivityController extends Controller
     public function delete ($id)
     {
         $act = Activity::find($id);
-        return view('activity.edit',compact('act'));
+        $act->delete();
+        dd($act);
+
+        return redirect()->route('activity.index');
     }
 }

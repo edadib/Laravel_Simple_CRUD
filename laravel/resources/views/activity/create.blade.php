@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-12 order-xl-1">
 
-                <div class="card bg-secondary shadow">
+                <div class="card bg-default shadow">
                     <div class="card-body">
                     
                         <form method="post" action="{{ route('activity.store')}}" enctype="multipart/form-data" autocomplete="off">
@@ -31,7 +31,7 @@
 
 
                                 <div class="mb-3 row">
-                                    <label class="col-md-2 col-form-label">Activity Name <code>*</code></label>
+                                    <label class="col-md-2 col-form-label" style="color: white">Activity Name <code>*</code></label>
                                     <div class="col">
                                         <input type="text" name="name" id="name" class="form-control form-control-alternative{{ $errors->has('title') ? ' is-invalid' : '' }}" placeholder="{{ __('Activity Name') }}" value="{{ old('title') }}" autofocus>
                                         @if ($errors->has('name'))
@@ -41,7 +41,7 @@
                                 </div>
 
                                 <div class="mb-3 row">
-                                    <label class="col-md-2 col-form-label">Details of the activity <code>*</code></label>
+                                    <label class="col-md-2 col-form-label" style="color: white">Details of the activity <code>*</code></label>
                                     <div class="col">
                                         <textarea type="text" name="details" id="details" rows="4"  class="form-control form-control-alternative{{ $errors->has('body') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}" autofocus>{{ old('body') }}</textarea>
                                         @if ($errors->has('details'))
@@ -62,9 +62,6 @@
             </div>
         </div>
     </div>
-
-        
-
-
+    @include('layouts.footers.auth')
 
 @endsection

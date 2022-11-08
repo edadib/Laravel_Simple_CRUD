@@ -63,6 +63,6 @@ Route::group(['middleware' => 'auth'], function () {
 
 	//announcenment
 	Route::get('/announ', 'App\Http\Controllers\AnnouncementController@index')->name('announ.index');
-	Route::get('/announ/create_announ', 'App\Http\Controllers\AnnouncementController@create');
-	Route::post('/announ/store', 'App\Http\Controllers\AnnouncementController@store');
+	Route::get('/create_announ', 'App\Http\Controllers\AnnouncementController@create')->name('announ.create');
+	Route::post('/announ/store', 'App\Http\Controllers\AnnouncementController@store')->name('announ.store');
 });

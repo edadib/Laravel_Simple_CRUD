@@ -4,7 +4,7 @@
     @include('users.partials.header', [
         'title' => __('Hello') . ' '. auth()->user()->name,
         'description' => __('Welcome to your profile'),
-        'class' => 'col-lg-7'
+        'class' => 'col-lg-12'
     ])   
 
     <div class="container-fluid mt--7">
