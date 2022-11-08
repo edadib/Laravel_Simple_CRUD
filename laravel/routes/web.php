@@ -20,12 +20,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Auth::routes();
-
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
-
 Route::group(['middleware' => 'auth'], function () {
+	Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+	Route::get('/faq', 'App\Http\Controllers\HomeController@faq')->name('faq');
+	Route::get('/floor', 'App\Http\Controllers\HomeController@floor')->name('floor');
+	Route::get('/activity-reserve', 'App\Http\Controllers\HomeController@reserve')->name('activity.reserve');
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
