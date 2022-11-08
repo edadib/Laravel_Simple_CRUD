@@ -37,4 +37,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/staff', 'App\Http\Controllers\StaffController@index')->name('staff.index');
     Route::get('/ngo', 'App\Http\Controllers\NgoController@index')->name('ngo.index');
     Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
+
+	//activity
+    Route::get('/activity-list', 'App\Http\Controllers\ActivityController@index')->name('activity.index');
+    Route::get('/create-activity', 'App\Http\Controllers\ActivityController@create')->name('activity.create');
+    Route::post('/store-activity', 'App\Http\Controllers\ActivityController@store')->name('activity.store');
+    Route::get('/edit-activity/{id}', 'App\Http\Controllers\ActivityController@edit')->name('activity.edit');
+    Route::post('/update-activity/{id}', 'App\Http\Controllers\ActivityController@update')->name('activity.update');
+    Route::post('/delete-activity', 'App\Http\Controllers\ActivityController@delete')->name('activity.delete');
 });
