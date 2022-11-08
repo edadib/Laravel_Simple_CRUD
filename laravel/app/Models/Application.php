@@ -15,6 +15,8 @@ class Application extends Model
         'roleID',
         'sizeID',
         'ngoID',
+        'att_status',
         'app_status',
+        'price',
     ];
 }
