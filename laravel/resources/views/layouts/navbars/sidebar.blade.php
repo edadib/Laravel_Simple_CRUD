@@ -1,9 +1,9 @@
-<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light" id="sidenav-main" style="background-color: #172b4d!important;">
     <div class="scrollbar-inner">
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="../assets/img/brand/l.png" class="navbar-brand-img" alt="...">
+          <img src="../assets/img/brand/delllogo.png" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">
@@ -12,42 +12,42 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('home') }}">
+                <a class="nav-link" href="{{ route('home') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('profile.edit') }}">
+                <a class="nav-link" href="{{ route('profile.edit') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('User profile') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('staff.user') }}">
+                <a class="nav-link" href="{{ route('staff.user') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('User Management') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('ngo.index') }}">
+                <a class="nav-link" href="{{ route('ngo.index') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('NGO Management') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('ngo.index') }}">
+                <a class="nav-link" href="{{ route('ngo.index') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Announcement') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('ngo.index') }}">
+                <a class="nav-link" href="{{ route('activity.index') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Activities') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('staff.index') }}">
+                <a class="nav-link" href="{{ route('staff.index') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Staff List') }}
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('application.index') }}">
+                <a class="nav-link" href="{{ route('application.index') }}" style="color: #fff;">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Application List') }}
                 </a>
             </li>

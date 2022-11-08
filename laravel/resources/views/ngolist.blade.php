@@ -45,8 +45,13 @@
                             <?php echo $sen->account; ?>
                             </td>
                             <td class="text-center">
-                              <button class="btn btn-success mt-4" >{{ __('Edit NGO') }}</button>
-                              <button class="btn btn-success mt-4" >{{ __('Delete NGO') }}</button>
+                              <form method="post" action="{{ route('ngo.delete_ngo')}}" autocomplete="off">
+                                @csrf
+                                @method('post')
+                                <input type="hidden" name="id" id="id" value="<?php echo $sen->id; ?>">
+                                <button class="btn btn-success" >{{ __('Edit NGO') }}</button>
+                                <button class="btn btn-danger" type="submit">{{ __('Delete NGO') }}</button>
+                              </form>
                             </td>
                         </tr>
                         <?php $count +=1; ?>
@@ -63,26 +68,23 @@
 @endsection
 
 <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   function add_ngo()
   {
     window.location.href = "{{ route('ngo.add_ngo')}}";
   }
 
-  function ngodelete(id)
+  function delete_ngo()
   {
-    // alert(id);
-    $.ajax({
-        url:"{{ route('ngo.delete')}}",
-        method:"POST",
-        data:{ 
-            id: id, 
-        },
-        success:function(result)
-        {
-            console.log(result);
-        }
-    });
+    Swal.fire({
+        title: 'Are You Sure ?',
+        text: 'Deleted data are not recoverable',
+        icon: 'error',
+        showCancelButton: true,
+        confirmButtonColor: '#fc0303',
+        confirmButtonText: 'Sure',
+    })
   }
 
 </script>

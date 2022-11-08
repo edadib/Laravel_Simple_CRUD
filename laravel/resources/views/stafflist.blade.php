@@ -19,6 +19,7 @@
                   <tr>
                     <th scope="col" class="sort" data-sort="name">No</th>
                     <th scope="col" class="sort" data-sort="budget">Staff</th>
+                    <th scope="col" class="sort" data-sort="budget">Staff ID</th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -31,6 +32,9 @@
                             </td>
                             <td class="budget">
                             <?php echo $sen->name; ?>
+                            </td>
+                            <td class="budget">
+                            <?php echo $sen->staff_id; ?>
                             </td>
                         </tr>
                         <?php $count +=1; ?>

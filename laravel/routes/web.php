@@ -35,14 +35,32 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
     Route::get('/marital', 'App\Http\Controllers\MaritalController@index')->name('marital.index');
+
+	//staff and user
     Route::get('/staff', 'App\Http\Controllers\StaffController@index')->name('staff.index');
+    Route::get('/add_user', 'App\Http\Controllers\StaffController@add_user')->name('staff.add_user');
+    Route::post('/insert_user', 'App\Http\Controllers\StaffController@insert_user')->name('staff.insert_user');
     Route::get('/staff-view/{staff_id}', 'App\Http\Controllers\StaffController@viewstaff')->name('staff.view');
     Route::get('/user', 'App\Http\Controllers\StaffController@userlist')->name('staff.user');
+    Route::post('/user/delete_user', 'App\Http\Controllers\StaffController@delete_user')->name('staff.delete_user');
+
+	//ngo
     Route::get('/ngo', 'App\Http\Controllers\NgoController@index')->name('ngo.index');
-    Route::get('/ngo/add_ngo', 'App\Http\Controllers\NgoController@add_ngo')->name('ngo.add_ngo');
-    Route::post('/ngo/insert_ngo', 'App\Http\Controllers\NgoController@insert_ngo')->name('ngo.insert_ngo');
-    Route::post('/delete/{id}', 'App\Http\Controllers\NgoController@get_delete')->name('ngo.delete');
-    Route::get('/announce', 'App\Http\Controllers\AnnouncementController@index');
-    Route::get('/application', 'App\Http\Controllers\ApplicationController@index')->name('application.index');
-    // Route::get('/user', 'App\Http\Controllers\StaffController@add_user')->name('user.add_user');;
+	Route::get('/ngo/add_ngo', 'App\Http\Controllers\NgoController@add_ngo')->name('ngo.add_ngo');
+	Route::post('/ngo/insert_ngo', 'App\Http\Controllers\NgoController@insert_ngo')->name('ngo.insert_ngo');
+	Route::post('/ngo/delete_ngo', 'App\Http\Controllers\NgoController@ngodelete')->name('ngo.delete_ngo');
+
+	//application
+	Route::get('/application', 'App\Http\Controllers\ApplicationController@index')->name('application.index');
+
+	//announce
+	Route::get('/announce', 'App\Http\Controllers\AnnouncementController@index');
+
+	//activity
+    Route::get('/activity-list', 'App\Http\Controllers\ActivityController@index')->name('activity.index');
+    Route::get('/create-activity', 'App\Http\Controllers\ActivityController@create')->name('activity.create');
+    Route::post('/store-activity', 'App\Http\Controllers\ActivityController@store')->name('activity.store');
+    Route::get('/edit-activity/{id}', 'App\Http\Controllers\ActivityController@edit')->name('activity.edit');
+    Route::post('/update-activity/{id}', 'App\Http\Controllers\ActivityController@update')->name('activity.update');
+    Route::post('/delete-activity', 'App\Http\Controllers\ActivityController@delete')->name('activity.delete');
 });

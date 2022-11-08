@@ -6,12 +6,12 @@
         <!-- Form -->
         <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
             <div class="form-group mb-0">
-                <div class="input-group input-group-alternative">
+                <!-- <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-search"></i></span>
                     </div>
                     <input class="form-control" placeholder="Search" type="text">
-                </div>
+                </div> -->
             </div>
         </form>
         <!-- User -->
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </a>
-                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                <!-- <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
                     <div class=" dropdown-header noti-title">
                         <h6 class="text-overflow m-0">{{ __('Welcome!') }}</h6>
                     </div>
@@ -53,7 +53,7 @@
                         <i class="ni ni-user-run"></i>
                         <span>{{ __('Logout') }}</span>
                     </a>
-                </div>
+                </div> -->
             </li>
         </ul>
     </div>
