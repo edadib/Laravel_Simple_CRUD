@@ -12,9 +12,6 @@
           <div class="card bg-default shadow">
             <div class="card-header bg-transparent border-0">
               <h3 class="text-white mb-0">User List</h3>
-              <div class="text-right">
-                  <button class="btn btn-success mt-4" onclick="add_user()">{{ __('Add User') }}</button>
-              </div>
             </div>
             <div class="table-responsive">
               <table class="table align-items-center table-dark table-flush" id="table_senarai">
@@ -53,6 +50,6 @@
 <script>
   function add_user()
   {
-      window.location.href = "{{ route('user.add_user')}}";
+    alert("hehe");
   }
 </script>

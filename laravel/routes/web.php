@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NgoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/staff-view/{staff_id}', 'App\Http\Controllers\StaffController@viewstaff')->name('staff.view');
     Route::get('/user', 'App\Http\Controllers\StaffController@userlist')->name('staff.user');
     Route::get('/ngo', 'App\Http\Controllers\NgoController@index')->name('ngo.index');
+    Route::get('/ngo/add_ngo', 'App\Http\Controllers\NgoController@add_ngo')->name('ngo.add_ngo');
+    Route::post('/ngo/insert_ngo', 'App\Http\Controllers\NgoController@insert_ngo')->name('ngo.insert_ngo');
+    Route::post('/delete/{id}', 'App\Http\Controllers\NgoController@get_delete')->name('ngo.delete');
     Route::get('/announce', 'App\Http\Controllers\AnnouncementController@index');
-    Route::get('/user', 'App\Http\Controllers\StaffController@add_user')->name('user.add_user');;
+    Route::get('/application', 'App\Http\Controllers\ApplicationController@index')->name('application.index');
+    // Route::get('/user', 'App\Http\Controllers\StaffController@add_user')->name('user.add_user');;
 });

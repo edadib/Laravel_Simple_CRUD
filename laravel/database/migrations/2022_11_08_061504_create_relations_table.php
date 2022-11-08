@@ -13,15 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('applications', function (Blueprint $table) {
+        Schema::create('relations', function (Blueprint $table) {
             $table->id();
-            $table->string('appID');
-            $table->string('applicant');
-            $table->string('staffID');
-            $table->string('roleID');
-            $table->string('sizeID');
-            $table->string('ngoID');
-            $table->string('app_status');
+            $table->string('relation');
             $table->timestamps();
         });
     }
@@ -33,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('applications');
+        Schema::dropIfExists('relations');
     }
 };
