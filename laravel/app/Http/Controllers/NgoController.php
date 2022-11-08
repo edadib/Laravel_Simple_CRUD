@@ -44,10 +44,14 @@ class NgoController extends Controller
         return redirect()->action([NgoController::class, 'index']);
     }
 
-    public function get_delete()
+    public function ngodelete()
     {
         $id = null;
         extract($_POST);
-        var_dump($id); die();
+        $data['id'] = $id;
+        $delete = DB::table('ngos')->where('id', $id)->delete();
+
+        return redirect()->action([NgoController::class, 'index']);
+        // var_dump($id); die();
     }
 }
