@@ -1,18 +1,3 @@
-<!--
-=========================================================
-* Argon Dashboard - v1.2.0
-=========================================================
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-
-
-* Copyright  Creative Tim (http://www.creative-tim.com)
-* Coded by www.creative-tim.com
-
-
-
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Marital</title>
+  <title>Staff</title>
   <!-- Favicon -->
   <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -48,7 +33,7 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="{{ route('home') }}">
                     <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                 </a>
@@ -71,7 +56,7 @@
                                 {{ __('User Management') }}
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('ngo.index') }}">
                                 {{ __('NGO Management') }}
                             </a>
@@ -142,7 +127,7 @@
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Marital Table</h6>
+              <h6 class="h2 text-white d-inline-block mb-0">Home Page</h6>
             </div>
           </div>
         </div>
@@ -155,46 +140,7 @@
         <div class="col">
           <div class="card bg-default shadow">
             <div class="card-header bg-transparent border-0">
-              <h3 class="text-white mb-0">Marital table</h3>
-            </div>
-            <div class="table-responsive">
-              <table class="table align-items-center table-dark table-flush" id="table_senarai">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col" class="sort" data-sort="name">No</th>
-                    <th scope="col" class="sort" data-sort="budget">Marital</th>
-                    <th scope="col" class="sort text-center" data-sort="budget">Action</th>
-                  </tr>
-                </thead>
-                <tbody class="list">
-                @if($senarai)
-                    <?php $count = 1; ?>
-                    @foreach ($senarai as $sen)
-                        <tr>
-                            <td class="budget">
-                            <?php echo $count; ?>
-                            </td>
-                            <td class="budget">
-                            <?php echo $sen->marital; ?>
-                            </td>
-                            <td class="text-center">
-                                <div class="dropdown">
-                                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a class="dropdown-item" href="#">View</a>
-                                        <a class="dropdown-item" href="#">Edit</a>
-                                        <a class="dropdown-item" href="#">Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <?php $count +=1; ?>
-                    @endforeach
-                @endif
-                </tbody>
-              </table>
+              <h3>HOME</h3>
             </div>
           </div>
         </div>

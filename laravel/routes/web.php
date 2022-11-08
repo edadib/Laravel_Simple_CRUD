@@ -34,5 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
     Route::get('/marital', 'App\Http\Controllers\MaritalController@index')->name('marital.index');
+    Route::get('/staff', 'App\Http\Controllers\StaffController@index')->name('staff.index');
+    Route::get('/ngo', 'App\Http\Controllers\NgoController@index')->name('ngo.index');
 });
 

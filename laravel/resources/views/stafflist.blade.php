@@ -1,18 +1,3 @@
-<!--
-=========================================================
-* Argon Dashboard - v1.2.0
-=========================================================
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-
-
-* Copyright  Creative Tim (http://www.creative-tim.com)
-* Coded by www.creative-tim.com
-
-
-
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Marital</title>
+  <title>Staff</title>
   <!-- Favicon -->
   <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -66,12 +51,12 @@
                                 {{ __('User profile') }}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="{{ route('staff.index') }}">
                                 {{ __('User Management') }}
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('ngo.index') }}">
                                 {{ __('NGO Management') }}
                             </a>
@@ -162,7 +147,7 @@
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col" class="sort" data-sort="name">No</th>
-                    <th scope="col" class="sort" data-sort="budget">Marital</th>
+                    <th scope="col" class="sort" data-sort="budget">Staff</th>
                     <th scope="col" class="sort text-center" data-sort="budget">Action</th>
                   </tr>
                 </thead>
@@ -175,7 +160,7 @@
                             <?php echo $count; ?>
                             </td>
                             <td class="budget">
-                            <?php echo $sen->marital; ?>
+                            <?php echo $sen->name; ?>
                             </td>
                             <td class="text-center">
                                 <div class="dropdown">
