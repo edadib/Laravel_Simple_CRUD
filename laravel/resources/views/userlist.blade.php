@@ -11,15 +11,17 @@
         <div class="col">
           <div class="card bg-default shadow">
             <div class="card-header bg-transparent border-0">
-              <h3 class="text-white mb-0">NGO List</h3>
+              <h3 class="text-white mb-0">User List</h3>
+              <div class="text-right">
+                  <button class="btn btn-success mt-4" onclick="add_user()">{{ __('Add User') }}</button>
+              </div>
             </div>
             <div class="table-responsive">
               <table class="table align-items-center table-dark table-flush" id="table_senarai">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col" class="sort" data-sort="name">No</th>
-                    <th scope="col" class="sort" data-sort="budget">NGO</th>
-                    <th scope="col" class="sort text-center" data-sort="budget">Action</th>
+                    <th scope="col" class="sort" data-sort="budget">User</th>
                   </tr>
                 </thead>
                 <tbody class="list">
@@ -32,18 +34,6 @@
                             </td>
                             <td class="budget">
                             <?php echo $sen->name; ?>
-                            </td>
-                            <td class="text-center">
-                                <div class="dropdown">
-                                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a class="dropdown-item" href="#">View</a>
-                                        <a class="dropdown-item" href="#">Edit</a>
-                                        <a class="dropdown-item" href="#">Delete</a>
-                                    </div>
-                                </div>
                             </td>
                         </tr>
                         <?php $count +=1; ?>
@@ -58,3 +48,11 @@
       @include('layouts.footers.auth')
     </div>
 @endsection
+
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+  function add_user()
+  {
+      window.location.href = "{{ route('user.add_user')}}";
+  }
+</script>
