@@ -36,6 +36,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/marital', 'App\Http\Controllers\MaritalController@index')->name('marital.index');
     Route::get('/staff', 'App\Http\Controllers\StaffController@index')->name('staff.index');
     Route::get('/ngo', 'App\Http\Controllers\NgoController@index')->name('ngo.index');
-    // Route::get('/announcement', 'App\Http\Controllers\NgoController@index')->name('ngo.index');
+
+
+
 });
 
