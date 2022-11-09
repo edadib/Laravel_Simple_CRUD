@@ -13,9 +13,21 @@
           <ul class="navbar-nav">
             @if(auth()->user()->roleID == 1)
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('announ.index') }}" style="color: #fff;">
-                    <span class="iconify" data-icon="line-md:telegram" style="color: white;" data-width="25" data-height="25"></span>
-                    &emsp;{{ __('Announcement') }}
+                <a class="nav-link" href="{{ route('home') }}" style="color: #fff;">
+                    <span class="iconify" data-icon="line-md:home-md-twotone" style="color: white;" data-width="25" data-height="25"></span>
+                    &emsp;{{ __('Home') }}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('faq') }}" style="color: #fff;">
+                    <span class="iconify" data-icon="line-md:clipboard-check-twotone" style="color: white;" data-width="25" data-height="25"></span>
+                    &emsp;{{ __('FAQ Section') }}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('floor') }}" style="color: #fff;">
+                    <span class="iconify" data-icon="line-md:twitter-twotone" style="color: white;" data-width="25" data-height="25"></span>
+                    &emsp;{{ __('Map/Floor Plan') }}
                 </a>
             </li>
             @endif
@@ -41,7 +53,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('ngo.index') }}" style="color: #fff;">
                         <span class="iconify" data-icon="line-md:telegram" style="color: white;" data-width="25" data-height="25"></span>
-                        &emsp;{{ __('Announcement Admin') }}
+                        &emsp;{{ __('Announcement') }}
                     </a>
                 </li>
                 <li class="nav-item">
