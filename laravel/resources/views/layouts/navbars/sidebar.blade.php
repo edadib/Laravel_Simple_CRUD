@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('ngo.index') }}" style="color: #fff;">
+                    <a class="nav-link" href="{{ route('announ.index') }}" style="color: #fff;">
                         <span class="iconify" data-icon="line-md:telegram" style="color: white;" data-width="25" data-height="25"></span>
                         &emsp;{{ __('Announcement') }}
                     </a>
