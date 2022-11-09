@@ -15,7 +15,7 @@
                 <tr>
                   <th>No</th>
                   <th>Staff</th>
-                  <th>Staff ID</th>
+                  <!-- <th>Staff ID</th> -->
                 </tr>
               </thead>
               <tbody class="list">
@@ -29,9 +29,9 @@
                           <td class="budget">
                           <?php echo $sen->name; ?>
                           </td>
-                          <td class="budget">
-                          <?php echo $sen->staff_id; ?>
-                          </td>
+                          <!-- <td class="budget">
+                          <?php //echo $sen->staff_id; ?>
+                          </td> -->
                       </tr>
                       <?php $count +=1; ?>
                   @endforeach
