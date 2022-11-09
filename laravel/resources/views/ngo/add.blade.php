@@ -54,48 +54,5 @@
     let name = $('#ngo_name').val();
     let phone = $('#ngo_phone').val();
     let account = $('#ngo_account').val();
-
-    // alert(name+" - "+phone+"  -"+account)
-
-    // Swal.fire({
-    //     title: 'Tambah Format',
-    //     text: 'Sila Pilih Cara Tambah Format',
-    //     icon: 'info',
-    //     showDenyButton: true,
-    //     showCancelButton: true,
-    //     confirmButtonText: 'Muat Naik',
-    //     denyButtonText: Karang Kandungan,
-    // }).then((result) => {
-    //     /* Read more about isConfirmed, isDenied below */
-    //     if (result.isConfirmed) {
-    //         //Swal.fire('Fungsi Belum Dibuka!', '', 'warning')
-    //         location.href='<?php //echo base_url()?>e-Surat/C_formatsurat/paparan_kemaskini_format/'+btoa("statik")
-    //     } 
-    //     else if (result.isDenied) {
-    //         location.href='<?php //echo base_url()?>e-Surat/C_formatsurat/paparan_kemaskini_format/'+btoa("dinamik")
-    //     }
-    // })
-
-    // var form_data = new FormData();
-
-    // form_data.append("name",name);
-    // form_data.append("phone",phone);
-    // form_data.append("account",account);
-
-    // $.ajax({
-    //     url:"{{ route('ngo.insert_ngo')}}",
-    //     method:"POST",
-    //     dataType:"JSON",
-    //     data:form_data,
-    //     contentType: false,
-    //     cache: false,
-    //     processData:false,
-    //     success:function(result)
-    //     {
-    //         console.log(result);
-    //         result = JSON.parse(result);
-    //         $('#unit_surat').val(result);
-    //     }
-    // });
   }
 </script>

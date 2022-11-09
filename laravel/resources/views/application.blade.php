@@ -6,7 +6,7 @@
 
 <div class="container-fluid mt--7">
   <div class="text-end mb-3 me-3">
-    <a href="#" onclick="add_user()" class="btn btn-success waves-effect waves-light">
+    <a href="#" onclick="add_application()" class="btn btn-success waves-effect waves-light">
       <i class="fas fa-plus me-2"></i>
       Add New Application
     </a>
@@ -27,6 +27,8 @@
                   <th scope="col" class="sort" data-sort="budget">Shirt Size </th>
                   <th scope="col" class="sort" data-sort="budget">NGO </th>
                   <th scope="col" class="sort" data-sort="budget">Relationship </th>
+                  <th scope="col" class="sort" data-sort="budget">Payment Status </th>
+                  <th scope="col" class="sort" data-sort="budget">Action </th>
                 </tr>
               </thead>
               <tbody class="list">
@@ -58,6 +60,18 @@
                       <td class="budget">
                       <?php echo $sen->relation; ?>
                       </td>
+                      <td class="budget">
+                      <?php echo $sen->payment; ?>
+                      </td>
+                      <td class="text-center">
+                        <form method="post" action="{{ route('application.appdelete')}}" autocomplete="off">
+                          @csrf
+                          @method('post')
+                          <input type="hidden" name="id" id="id" value="<?php echo $sen->app_id; ?>">
+                          <!-- <button class="btn btn-success" >{{ __('Edit') }}</button> -->
+                          <button class="btn btn-danger" type="submit">{{ __('Delete') }}</button>
+                        </form>
+                      </td>
                     </tr>
                     <?php $count +=1; ?>
                   @endforeach
@@ -72,3 +86,11 @@
   @include('layouts.footers.auth')
 </div>
 @endsection
+
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+  function add_application()
+  {
+    window.location.href = "{{ route('application.add_app')}}";
+  }
+</script>

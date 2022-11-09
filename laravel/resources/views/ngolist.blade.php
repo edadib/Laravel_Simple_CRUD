@@ -6,7 +6,7 @@
     ])
       <div class="container-fluid mt--7">
           <div class="text-end mb-3 me-3">
-              <a href= "" class="btn btn-success waves-effect waves-light" onclick="add_ngo()">
+              <a href= "#" onclick="add_ngo()" class="btn btn-success waves-effect waves-light">
                   <i class="fas fa-plus me-2"></i>
                   Add New NGO</a>
           </div>
@@ -48,7 +48,7 @@
                                 @csrf
                                 @method('post')
                                 <input type="hidden" name="id" id="id" value="<?php echo $sen->id; ?>">
-                                <button class="btn btn-success" >{{ __('Edit') }}</button>
+                                <!-- <button class="btn btn-success" >{{ __('Edit') }}</button> -->
                                 <button class="btn btn-danger" type="submit">{{ __('Delete') }}</button>
                               </form>
                             </td>

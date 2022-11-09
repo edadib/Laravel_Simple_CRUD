@@ -51,6 +51,9 @@ Route::group(['middleware' => 'auth'], function () {
 
 	//application
 	Route::get('/application', 'App\Http\Controllers\ApplicationController@index')->name('application.index');
+	Route::get('/register', 'App\Http\Controllers\ApplicationController@add_app')->name('application.add_app');
+	Route::post('/insert_app', 'App\Http\Controllers\ApplicationController@insert_app')->name('application.insert_app');
+	Route::post('/delete_app', 'App\Http\Controllers\ApplicationController@appdelete')->name('application.appdelete');
 	
 	//activity
     Route::get('/activity-list', 'App\Http\Controllers\ActivityController@index')->name('activity.index');
