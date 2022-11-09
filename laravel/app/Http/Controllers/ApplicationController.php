@@ -71,7 +71,7 @@ class ApplicationController extends Controller
             'sizeID' => $size,
             'ngoID' => $ngo,
             'att_status' => 0,
-            'app_status' => 0,
+            'app_status' => 1,
             'price' => 50,
         ]);
 
